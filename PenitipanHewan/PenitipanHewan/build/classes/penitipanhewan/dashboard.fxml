@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="penitipanhewan.DashboardController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="6.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="20.0" prefWidth="1093.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-9.0" layoutY="-77.0" prefHeight="32.0" prefWidth="1109.0" style="-fx-background-color: #D0D6C2;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="7.0" layoutY="1.0">
+                                 <image>
+                                    <Image url="@../Image/logo%20pet%20shop.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="44.0" layoutY="2.0" text="Pet Shop">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="close" layoutX="1071.0" layoutY="8.0" mnemonicParsing="false" onAction="#close" prefHeight="18.0" prefWidth="35.0" style="-fx-background-color: #E20000;" text="X">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></Button>
+                              <Button fx:id="minimize" layoutX="1024.0" layoutY="9.0" mnemonicParsing="false" onAction="#minimize" prefHeight="13.0" prefWidth="36.0" text="-">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font></Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-7.0" layoutY="87.0" prefHeight="567.0" prefWidth="207.0" style="-fx-background-color: #D7E5B4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="105.0" fitWidth="119.0" layoutX="41.0" layoutY="27.0">
+                                 <image>
+                                    <Image url="@../Image/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="33.0" layoutY="150.0" text="Selamat Datang">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" layoutX="86.0" layoutY="177.0" text="User" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.0" layoutX="100.0" layoutY="220.0" startX="-100.0" />
+                              <Button fx:id="home_btn" layoutX="52.0" layoutY="239.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #A2C35B;" text="Home">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="addPets_btn" layoutX="51.0" layoutY="278.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #A2C35B;" text="Add Pets">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="purchase_btn" layoutX="52.0" layoutY="318.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #A2C35B;" text="Transaction">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="logout" layoutX="74.0" layoutY="471.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #266C19;" text="Logout" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font></Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="570.0" prefWidth="913.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="beranda_form" layoutX="7.0" layoutY="1.0" prefHeight="555.0" prefWidth="899.0" style="-fx-background-color: #D7E5B4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="135.0" prefWidth="870.0" style="-fx-background-color: #596243;">
+                                 <children>
+                                    <AnchorPane layoutX="37.0" layoutY="26.0" prefHeight="84.0" prefWidth="178.0" style="-fx-background-color: #DAF7A6;">
+                                       <children>
+                                          <Label fx:id="home_avaiblePets" layoutX="47.0" layoutY="14.0" prefHeight="32.0" prefWidth="81.0" text="0" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="44.0" layoutY="53.0" text="Hewan Tersedia">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="317.0" layoutY="26.0" prefHeight="84.0" prefWidth="178.0" style="-fx-background-color: #DAF7A6;">
+                                       <children>
+                                          <Label layoutX="50.0" layoutY="53.0" text="Total Penghasilan">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="home_income" layoutY="14.0" prefHeight="32.0" prefWidth="212.0" text="Rp. 0" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="626.0" layoutY="26.0" prefHeight="84.0" prefWidth="178.0" style="-fx-background-color: #DAF7A6;">
+                                       <children>
+                                          <Label layoutX="49.0" layoutY="53.0" text="Total Pelanggan">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="home_totalcust" layoutX="52.0" layoutY="14.0" prefHeight="32.0" prefWidth="81.0" text="0" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                 </children></AnchorPane>
+                              <AreaChart fx:id="home_chart" layoutX="74.0" layoutY="166.0" prefHeight="364.0" prefWidth="763.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </AreaChart>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="addPets_form" prefHeight="543.0" prefWidth="886.0" style="-fx-background-color: #D7E5B4;" visible="false">
+                           <children>
+                              <AnchorPane prefHeight="526.0" prefWidth="253.0">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="40.0" text="ID Hewan :" />
+                                    <Label layoutX="25.0" layoutY="80.0" text="Keturunan :" />
+                                    <Label layoutX="10.0" layoutY="123.0" text="Jenis Kelamin :" />
+                                    <TextField fx:id="addPets_petId" layoutX="90.0" layoutY="36.0" />
+                                    <TextField fx:id="addPets_breed" layoutX="90.0" layoutY="76.0" />
+                                    <Button fx:id="addPets_add" layoutX="35.0" layoutY="245.0" mnemonicParsing="false" onAction="#addPetsAdd" prefHeight="37.0" prefWidth="59.0" style="-fx-background-color: #A2C35B;" text="Tambah" />
+                                    <Button fx:id="addPets_update" layoutX="157.0" layoutY="247.0" mnemonicParsing="false" onAction="#addPetsUpdate" prefHeight="35.0" prefWidth="55.0" style="-fx-background-color: #A2C35B;" text="Update" />
+                                    <Button fx:id="addPets_clear" layoutX="34.0" layoutY="297.0" mnemonicParsing="false" onAction="#addPetsClear" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #A2C35B;" text="Clear" />
+                                    <Button fx:id="addPets_delete" layoutX="160.0" layoutY="296.0" mnemonicParsing="false" onAction="#addPetsDelete" prefHeight="37.0" prefWidth="50.0" style="-fx-background-color: #A2C35B;" text="Hapus" />
+                                    <ComboBox fx:id="addPets_sex" layoutX="93.0" layoutY="119.0" onAction="#addPetsSexList" prefWidth="150.0" promptText="Pilih...." style="-fx-background-color: #A2C35B;" />
+                                    <TextField fx:id="addPets_age" layoutX="90.0" layoutY="157.0" />
+                                    <Label layoutX="46.0" layoutY="161.0" text="Umur :" />
+                                    <TextField fx:id="addPets_price" layoutX="90.0" layoutY="198.0" />
+                                    <Label layoutX="46.0" layoutY="202.0" text="Price :" />
+                                    <Button fx:id="btnprintpetreport" layoutX="76.0" layoutY="465.0" mnemonicParsing="false" onAction="#CetakReportpet" style="-fx-background-color: #A2C35B;" text="Print Pet Report" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="284.0" prefHeight="571.0" prefWidth="626.0" style="-fx-background-color: #D7E5B4;">
+                                 <children>
+                                    <TextField fx:id="addPets_search" layoutX="32.0" layoutY="22.0" onKeyTyped="#addPetsSearch" prefHeight="25.0" prefWidth="337.0" promptText="Cari.." />
+                                    <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="330.0" layoutY="23.0">
+                                       <image>
+                                          <Image url="@../Image/search.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TableView fx:id="addPets_tableview" layoutX="32.0" layoutY="74.0" onMouseClicked="#addPetsSelect" prefHeight="443.0" prefWidth="555.0">
+                                      <columns>
+                                        <TableColumn fx:id="addPets_col_petId" prefWidth="143.0" text="Pet ID" />
+                                        <TableColumn fx:id="addPets_col_breed" prefWidth="91.0" text="Breed" />
+                                          <TableColumn fx:id="addPets_col_sex" prefWidth="90.0" text="Sex" />
+                                          <TableColumn fx:id="addPets_col_age" prefWidth="113.0" text="Age" />
+                                          <TableColumn fx:id="addPets_col_price" prefWidth="117.0" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="purchase_form" onDragDetected="#CetakReportTransaksi" prefHeight="552.0" prefWidth="894.0" visible="false">
+                           <children>
+                              <AnchorPane prefHeight="572.0" prefWidth="894.0" style="-fx-background-color: #D7E5B4;">
+                                 <children>
+                                    <AnchorPane layoutX="648.0" prefHeight="551.0" prefWidth="257.0">
+                                       <children>
+                                          <Label layoutY="22.0" text="ID Hewan :">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="purchase_petid" layoutX="78.0" layoutY="20.0" onAction="#PurchasePetId" prefWidth="150.0" promptText="Pilih..." />
+                                          <ComboBox fx:id="purchase_breed" layoutX="78.0" layoutY="64.0" onAction="#purchaseBreed" prefWidth="150.0" promptText="Pilih..." />
+                                          <Label layoutY="66.0" text="Keturunan :">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="30.0" layoutY="207.0" text="Total :" />
+                                          <Label fx:id="purchase_total" layoutX="83.0" layoutY="207.0" prefHeight="17.0" prefWidth="117.0" text="Rp. 0" />
+                                          <Label layoutX="22.0" layoutY="233.0" text="Amount :" />
+                                          <Label layoutX="22.0" layoutY="259.0" prefHeight="17.0" prefWidth="64.0" text="Balance :" />
+                                          <TextField fx:id="purchase_amount" layoutX="84.0" layoutY="229.0" onAction="#purchaseAmount" prefHeight="25.0" prefWidth="137.0" />
+                                          <Label fx:id="purchase_balance" layoutX="84.0" layoutY="259.0" prefHeight="17.0" prefWidth="97.0" text="Rp. 0" />
+                                          <Button fx:id="purchase_pay" layoutX="170.0" layoutY="456.0" mnemonicParsing="false" onAction="#purchasePay" style="-fx-background-color: #A2C35B;" text="Pay" />
+                                          <Label layoutX="13.0" layoutY="113.0" text="Jumlah :">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="purchase_add" layoutX="152.0" layoutY="163.0" mnemonicParsing="false" onAction="#purchaseAdd" style="-fx-background-color: #A2C35B;" text="Tambah" />
+                                          <Spinner fx:id="purchase_quantity" layoutX="79.0" layoutY="111.0" onMouseClicked="#purchaseQty" prefHeight="25.0" prefWidth="73.0" />
+                                          <Button fx:id="btnprinttransactionreports" layoutX="18.0" layoutY="456.0" mnemonicParsing="false" onAction="#CetakReportTransaksi" style="-fx-background-color: #A2C35B;" text="Print Transaction Reports" />
+                                       </children>
+                                    </AnchorPane>
+                                    <TableView fx:id="purchase_tableview" layoutX="14.0" layoutY="14.0" prefHeight="483.0" prefWidth="618.0">
+                                      <columns>
+                                        <TableColumn fx:id="purchase_col_petid" prefWidth="88.0" text="Pet ID" />
+                                        <TableColumn fx:id="purchase_col_breed" prefWidth="124.0" text="Breed" />
+                                          <TableColumn fx:id="purchase_col_sex" prefWidth="84.0" text="Sex" />
+                                          <TableColumn fx:id="purchase_col_age" prefWidth="135.0" text="Age" />
+                                          <TableColumn fx:id="purchase_col_quantity" prefWidth="78.0" text="Quantity" />
+                                          <TableColumn fx:id="purchase_col_price" prefWidth="108.0" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="penitipanhewan.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="300.0" layoutY="8.0" prefHeight="408.0" prefWidth="300.0" style="-fx-background-color: #D7E5B4;">
+               <children>
+                  <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="132.0" layoutY="57.0">
+                     <image>
+                        <Image url="@../Image/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="92.0" layoutY="117.0" text="Selamat Datang ">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="84.0" layoutY="176.0" onAction="#adminLogin" promptText="Username" />
+                  <PasswordField fx:id="password" layoutX="84.0" layoutY="215.0" onAction="#adminLogin" promptText="Password" />
+                  <Button fx:id="loginbtn" layoutX="133.0" layoutY="266.0" mnemonicParsing="false" onAction="#adminLogin" style="-fx-background-color: #A2C35B;" text="Login" />
+                  <Button fx:id="close" layoutX="264.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #E20000;" text="X" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="main_form" layoutX="-4.0" layoutY="7.0" prefHeight="408.0" prefWidth="304.0" style="-fx-background-color: #E7F4CB;">
+               <children>
+                  <ImageView fitHeight="344.0" fitWidth="250.0" layoutX="27.0" layoutY="28.0">
+                     <image>
+                        <Image url="@../Image/logo%20pet%20shop.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
